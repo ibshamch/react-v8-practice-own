@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Pet from "./Pet";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
@@ -19,7 +18,7 @@ const SearchParams = () => {
   // Aik se zayada useeffect use na hi krein to behtar hai aik component k andr
   useEffect(() => {
     requestPets();
-  }, [animal]);
+  }, []);
 
   const requestPets = async () => {
     console.log("Use Effect Call");
